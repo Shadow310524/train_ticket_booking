@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+    <link rel="stylesheet" href="/static/login.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    {% if message == "Green" %}
+                        <div class="alert hide green">
+                            <span class="msg green">Successfully registered. Please login</span>
+                        </div>
+                    {% else %}
+                        <div class="alert hide">
+                            <span class="msg">{{ message }}</span>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <script>
+
+        setTimeout(pop_up(), 4000);
+        setTimeout(pop_up(), 2000);
+        function pop_up(){
+          $('.alert').addClass("show");
+          $('.alert').removeClass("hide");
+          $('.alert').addClass("showAlert");
+
+          setTimeout(function(){
+            $('.alert').removeClass("show");
+            $('.alert').addClass("hide");
+          },5000);
+        };
+
+        function close(){
+          $('.alert').removeClass("show");
+          $('.alert').addClass("hide");
+        };
+     </script>
+    <a href="/signup">SIGNUP</a>
+    <form action="http://127.0.0.1:5000/login" method="post">
+    <div class="l1">
+    <h2>LOGIN</h2>
+    <div>
+    <label for="username">USERNAME:</label>
+    <br>
+    <input type="text" id="username" name="username">
+    </div>
+    <br>
+    <div>
+    <label for="password">PASSWORD:</label>
+    <br>
+<input type="password" id="password" name="password">
+</div>
+<br> 
+<div>
+    <input type="submit" value="LOGIN">
+</div>
+</form>
+</div>
+</body>
+</html>

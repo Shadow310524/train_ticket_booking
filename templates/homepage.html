@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Train Ticket Booking</title>
+ <link rel="stylesheet" href="/static/homepage.css">
+ 
+</head>
+<body>
+  <!-- Header section -->
+  <header>
+    <img src="/static/slogan.jpg" alt="Train Ticket Booking Logo">
+  </header>
+
+  <!-- Main content section -->
+  <main>
+    <h1>TRAIN TICKET BOOKING</h1>
+    <!-- Search form -->
+    <div class="container"> 
+    <form action="/search" method="POST">
+      <select name="departure">
+        {% for city in departure_cities %}
+          <option value="{{ city }}">{{ city }}</option>
+        {% endfor %}
+      </select>
+      <br>
+      <br>
+      <select name="arrival">
+        {% for city in arrival_cities %}
+          <option value="{{ city }}">{{ city }}</option>
+        {% endfor %}
+      </select>
+      <br>
+      <br>
+      <input type="date" name="travelDate">
+      <br>
+      <br>
+      <input type="submit" class="button1" value="Search" onclick="search()">
+      <br>
+      <br>
+    </form>
+  </div>
+  <input type="button" class="button2" value="LOGOUT" onclick="logout()">
+
+  </main>
+
+  <!-- Footer section -->
+  <footer>
+    <p>&copy; 2023 Train Ticket Booking. All rights reserved.</p>
+  </footer>
+
+  <!-- Add your JavaScript code here if needed -->
+  <script>
+    function logout() {
+      // Redirect to the login page
+      window.location.href = "/login";
+    }
+      function search(){
+        //Redirect to the booking page
+        window.location.href ="/booking";
+      }
+  </script> 
+
+</body>
+</html>

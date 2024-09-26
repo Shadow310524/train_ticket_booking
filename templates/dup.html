@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket</title>
+  <link rel="stylesheet" href="/static/ticket.css">
+</head>
+<body>
+  <!-- Header section -->
+  <header>
+    <h1>Ticket Details</h1>
+  </header>
+
+  <!-- Ticket details section -->
+  <section>
+    <table class="ticket__table">
+      <tr>
+        <td>Train ID:</td>
+        <td>{{ search_results[0][0] }}</td>
+      </tr>
+      <tr>
+        <td>Train Name:</td>
+        <td>{{ search_results[0][1] }}</td>
+      </tr>
+      <tr>
+        <td>Departure:</td>
+        <td>{{ search_results[0][2] }}</td>
+      </tr>
+      <tr>
+        <td>Arrival:</td>
+        <td>{{ search_results[0][3] }}</td>
+      </tr>
+      <tr>
+        <td>Departure Time:</td>
+        <td>{{ search_results[0][4] }}</td>
+      </tr>
+      <tr>
+        <td>Arrival Time:</td>
+        <td>{{ search_results[0][5] }}</td>
+      </tr>
+      <tr>
+        <td>Duration:</td>
+        <td>{{ search_results[0][6] }}</td>
+      </tr>
+      <tr>
+        <td>Date of Travel:</td>
+        <td>{{ search_results[0][7] }}</td>
+      </tr>
+      <tr>
+        <td>Selected Seat Class:</td>
+        <td>{{ seat_class }}</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Fare details section -->
+  <section>
+    <table class="fare__table">
+      <tr>
+        <th>Seat Class</th>
+        <th>Seats</th>
+        <th>Total Seats</th>
+        <th>Fare</th>
+      </tr>
+      {% for row in fare_results %}
+      <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </section>
+
+  <p class="journey__message">HAVE A SAFE JOURNEY</p>
+  <p class="wishes__message">WISHES FROM HARISH SUNDAR</p>
+
+  <!-- Footer section -->
+  <footer>
+    <p>&copy; 2023 Train Ticket Booking. All rights reserved.</p>
+  </footer>
+</body>
+</html>

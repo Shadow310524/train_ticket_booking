@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/ticket.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Ticket Information</h1>
+  <table class="ticket-table">
+    <tr>
+      <th>PASSENGER NAME:</th>
+      <td>Sundar</td>
+    </tr>
+    <tr>
+      <th>Train ID:</th>
+      <td>{{ search_results[0][0] }}</td>
+    </tr>
+    
+    <tr>
+      <th>Train Name:</th>
+      <td>{{ search_results[0][1] }}</td>
+    </tr>
+    <tr>
+      <th>Departure:</th>
+      <td>{{ search_results[0][2] }}</td>
+    </tr>
+    <tr>
+      <th>Arrival:</th>
+      <td>{{ search_results[0][3] }}</td>
+    </tr>
+    <tr>
+      <th>Departure Time:</th>
+      <td>{{ search_results[0][4] }}</td>
+    </tr>
+    <tr>
+      <th>Arrival Time:</th>
+      <td>{{ search_results[0][5] }}</td>
+    </tr>
+    <tr>
+      <th>Duration:</th>
+      <td>{{ search_results[0][6] }}</td>
+    </tr>
+    <tr>
+      <th>Date of Travel:</th>
+      <td>{{ search_results[0][7] }}</td>
+    </tr>
+    <tr>
+      <th>Selected Seat Class:</th>
+      <td>{{ selected_seat_class|replace("_", " ")|upper }} CLASS</td>
+    </tr>
+    
+  </table>
+
+
+
+<input type="button" value="CONFIRM TO PAYMENT " onclick="payment()" >
+ 
+
+
+  <div class="message-box">
+    <h2>HAVE A SAFE JOURNEY</h2>
+    <h5>WISHES FROM HARISH SUNDAR</h5>
+  </div>
+  
+  <script>
+    function payment() {
+      window.location.href = "/payment";
+    }
+    </script>
+
+    
+  <!-- Footer section -->
+
+  <footer>
+    <p>&copy; 2023 Train Ticket Booking. All rights reserved.</p>
+  </footer>
+</body>
+</html>

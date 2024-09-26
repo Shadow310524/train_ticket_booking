@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Registration</title>
+  <link rel="stylesheet" href="/static/signup.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+  {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    {% if message == "Green" %}
+                        <div class="alert hide green">
+                            <span class="msg green">Successfully registered. Please login</span>
+                        </div>
+                    {% else %}
+                        <div class="alert hide">
+                            <span class="msg">{{ message }}</span>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <script>
+
+        setTimeout(pop_up(), 4000);
+        setTimeout(pop_up(), 2000);
+        function pop_up(){
+          $('.alert').addClass("show");
+          $('.alert').removeClass("hide");
+          $('.alert').addClass("showAlert");
+
+          setTimeout(function(){
+            $('.alert').removeClass("show");
+            $('.alert').addClass("hide");
+          },5000);
+        };
+
+        function close(){
+          $('.alert').removeClass("show");
+          $('.alert').addClass("hide");
+        };
+     </script>
+    
+  <a href="/login">LOGIN</a>
+  <nav></nav>
+   <div class="container">
+    <H2>USER REGISTRATION</H2>
+    <div><form action="http://127.0.0.1:5000/signup" method="post" >
+<div>
+  <label for="username">USERNAME:</label>
+  <br>
+  <input type="text" id="username" name="username"> 
+</div>
+<br>
+<div>
+  <label for="email">E-MAIL:</label>
+  <br>
+  <input type="email" id="email" name="email">
+</div>
+<br>
+<div>
+  <label for="password">PASSWORD:</label>
+  <br>
+  <input type="password" id="password" name="password">
+</div>
+<br>
+<div>
+  <label for="confirm_password">CONFIRM PASSWORD:</label>
+  <br>
+  <input type="password" id="confirm_password" name="confirm_password">
+</div>
+<br>
+<input type="submit" value="REGISTER"> 
+    </form>
+  </div>

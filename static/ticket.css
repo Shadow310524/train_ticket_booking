@@ -1,0 +1,72 @@
+h1 {
+    color: white;
+    text-align: center;
+    padding: 50px;
+    margin: -7px 0 70px;
+    background-color: black;
+  }
+  body{
+    background-color: lightskyblue;
+  }
+  
+  .ticket-table {
+    width: 400px;
+    margin: 50px auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: grey;
+    font-family: Arial, sans-serif;
+  }
+  
+  .ticket-table th {
+    color: white;
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  input[type=button]{
+    background-color: green;
+    cursor: pointer;
+    margin-left: 650px;
+    margin-bottom: 45px;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+  
+  
+  .ticket-table td {
+    color: white;
+    padding-bottom: 10px;
+  }
+  
+  .ticket-table tr:last-child td {
+    padding-top: 10px;
+  }
+  
+  .ticket-table th:first-child,
+  .ticket-table td:first-child {
+    width: 150px;
+  }
+  
+  .ticket-table td:last-child {
+    font-weight: bold;
+  }
+  
+  footer {
+    color: white;
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px 0 30px;
+    background-color: black;
+  }
+  .message-box {
+    border: 1px solid black;
+    padding: 10px;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    background-color: lightgreen;
+  }
+
+  

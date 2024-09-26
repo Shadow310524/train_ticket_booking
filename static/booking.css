@@ -1,0 +1,211 @@
+/* Header styles */
+header {
+  text-align: center;
+  background-color: black;
+  padding-bottom: 2.5%;
+}
+
+img {
+  height: 350px;
+  width: 1000px;
+  bottom: 150px;
+  padding-top: 30px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+h2 {
+  color: grey;
+}
+
+/* Main content styles */
+main {
+  margin: 20px;
+}
+
+/* Search form styles */
+form {
+  margin-bottom: 20px;
+}
+
+/* Ticket booking options styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Train schedule and availability styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Fare information styles */
+table:last-of-type {
+  margin-top: 20px;
+}
+
+/* Seat selection styles */
+/* Add your specific styles for seat selection here */
+
+/* Additional booking options styles */
+section:last-of-type {
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+  height: 50px;
+  padding-top: 50px;
+}
+
+
+
+.animation-img {
+  width: 100px; /* Adjust the desired width */
+  height: 40px; /* Maintain aspect ratio */
+  margin-left: 900px;
+  position: relative;
+  bottom: 90px;
+}
+
+/* Styles for Train Schedule and Availability table */
+.Train.schedule.and.availability {
+  margin: 20px 0;
+  margin-bottom: 10px;
+  position: relative;
+  top: -70px;
+}
+
+.Train.schedule.and.availability h2 {
+  font-size: 25px;
+}
+
+/* Train schedule and availability styles */
+.table_1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.table_1 th,
+.table_1 td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.table_1 .table__header_1 {
+  background-color: #f2f2f2;
+}
+
+.table_1 .table__row:nth-child(even) {
+  background-color: green;
+}
+
+
+/* Fare information styles */
+.table_2 {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table_2 th,
+.table_2 td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.table_2 .table__header_2 {
+  background-color: white;
+}
+
+.table_2 .table__row:nth-child(even) {
+  background-color: white;
+}
+
+.table_2 .table__row:hover {
+  background-color: lightblue;
+  cursor: pointer; /* Add cursor pointer on hover */
+}
+
+
+
+
+
+
+
+/* Seat selection and fare information styles */
+.seat-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.seat-info-item {
+  flex-basis: 50%;
+  padding: 5px;
+}
+
+.seat-info-item .seat-label {
+  font-weight: bold;
+}
+
+.seat-info-item .seat-value {
+  margin-left: 5px;
+}
+.book-now-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.book-now-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  position: relative;
+}
+
+button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 700px;
+}
+
+button[type=submit]:hover {
+  background-color: #45A049; 
+}

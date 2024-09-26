@@ -1,0 +1,121 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: blue;
+}
+
+h1 {
+  margin-left: 550px;
+}
+
+header {
+  background-color: black;
+  padding: 20px;
+}
+
+header img {
+  width: 1000px;
+  height: 350px;
+  margin-right: 100px;
+  padding-left: 250px;
+}
+
+main {
+  padding: 20px;
+}
+
+h1,
+h2 {
+  color: white;
+}
+
+form {
+  margin-bottom: 250px;
+}
+
+input[type="text"],
+input[type="date"] {
+  padding: 4px;
+  width: 275px;
+  height: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.button1 {
+  width: 200px;
+  padding: 8px;
+  margin-left: 150px;
+}
+
+.button1 {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+
+  header img {
+    margin-bottom: 10px;
+  }
+
+  form input[type="text"],
+  form input[type="date"],
+  form input[type="submit"] {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+.container {
+  height: 350px;
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  margin-left: 500px;
+  padding-right: 500px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+input[type="button"] {
+  right: 4%;
+  bottom: 94%;
+  position: absolute;
+  height: 25px;
+  width: 150px;
+  background-color: white;
+  color: red;
+}
+
+/* Departure and Arrival select elements */
+select[name="departure"],
+select[name="arrival"] {
+  padding: 4px;
+  width: 275px;
+  height: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
